@@ -79,7 +79,7 @@ if($y === false){
 
 
 
-$result = $y === false ? 'H Not Found' : "H Fosund at Index" . $y . '</br>';
+$result = $y === false ? 'H Not Found' : "H Found at Index" . $y . '</br>';
 
 echo $result;
 
@@ -115,10 +115,45 @@ var_dump($x && $y);
 var_dump($x || $y);
 var_dump($x || !$y);
 
+echo '</br>';
+
 
 
 
 
 
 // Bitwise Operators
+
+
+// & | (and or)
+// ^ (xor)
+// ~ (flip binaries)
+// << >> (shift binary)
+
+$x = 6; //110
+$y =3;  //011
+
+# 110
+# 011
+# -----
+# 010
+
+var_dump($x & $y);
+
+
+// Array Operators
+
+echo '</br>';
+$x = ['a','b','c'];
+$y = ['d','e','f','g','h'];
+
+$z = $x + $y;
+print_r($z);
+
+var_dump($x === $y);
+
+
+
+// Execution Operator (``) #for bash operations
+
 
