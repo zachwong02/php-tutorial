@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>
-        <?= 'Hello World' ?> 
+        <?= 'Hello World'  # shorthand to echo ?> 
     </h1>    
 
 

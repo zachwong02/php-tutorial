@@ -7,12 +7,12 @@ switch ($paymentStatus) {
         echo 'paid';
         break;
 
-    case 'declined':
+    case 'declined':                                        # this allows two cases to have the same results 
     case 'rejected':
         echo 'payment declined';
         break;
     
-    default:
+    default:                                                
         echo 'not paid';
         break;
 }

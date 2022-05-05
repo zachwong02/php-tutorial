@@ -1,35 +1,33 @@
 <?php 
 
-// define()
+// define() (runs at run time)
 
 define('STATUS_PAID','paid');
+echo STATUS_PAID . '</br>';
 
-echo STATUS_PAID;
 
-// Check constant
-
-echo defined('STATUS_VOID');
+echo defined('STATUS_VOID') . '</br>'; # check whether constant is defined
 
 
 $name = "RESOLVED";
-define('STATUS_' . $name, $name);
-
-echo STATUS_RESOLVED;
-
+define('STATUS_' . $name, $name); # variable constant
+echo STATUS_RESOLVED . '</br>';
 
 
-// const
+
+
+
+
+// const (runs at compile time)
 
 const STATUS_DELIVERY = 'delivered';
-echo STATUS_DELIVERY;
+echo STATUS_DELIVERY . '</br>';
 
 
 
 // magic const 
 
-
-echo __LINE__;
-echo __DIR__;
-
+echo __LINE__ . '</br>';
+echo __DIR__ . '</br>';
 
 ?>

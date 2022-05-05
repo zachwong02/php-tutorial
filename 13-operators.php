@@ -3,157 +3,155 @@
 // Operators
 
 
-// Arithmetic Operators
+    // Arithmetic Operators
+        
+        # +     addition
+        # -     subtraction
+        # *     multiplication
+        # /     division
+        # %     modulus
+        # **    exponentiation
+    
+    
+    
+        #infinity and beyond
+            $x =10;
+            echo var_dump(fdiv($x,0)) , '</br>';    # fdiv() performs floating point division 
 
-$x =10;
-$y = 2;
 
-echo $x + $y . '</br>';
-echo $x - $y . '</br>';
-echo $x * $y . '</br>';
-echo $x / $y . '</br>';
-echo $x % $y . '</br>';
-echo $x ** $y . '</br>';
+        #modulus with floats 
+            $x = 10.5;
+            $y = 2.9;
+            echo var_dump(fmod($x,$y)) , '</br>';   # fmod() performs floating point modulus
 
-#infinity and beyond
-echo var_dump(fdiv($x,0)) , '</br>';
 
 
-#modulus with floats 
-$x = 10.5;
-$y = 2.9;
-echo var_dump(fmod($x,$y)) , '</br>';
 
 
+    // Assigment Operator
 
+        $x = $y = 10;
 
+        echo var_dump($x,$y),'</br>';               # assign multiple variables 
 
-// Assigment Operator
+        $x += 2;
+        echo var_dump($x),'</br>';
 
-$x = $y = 10;
 
-echo var_dump($x,$y),'</br>';
 
-$x += 2;
-echo var_dump($x),'</br>';
 
 
+    // String Operator
+        $x = 'Hello';
+        $x .= 'World';                              # .= adds additional strings to a variable               
 
+        echo $x,'</br>';
 
 
-// String Operator
-$x = 'Hello';
-$x .= 'World';
 
-echo $x,'</br>';
 
 
+    // Comparison Operators
 
+        $x = 5;
+        $y = 3;
 
+        echo var_dump($x == $y),'</br>';            # equals comparision 
+        echo var_dump($x === $y),'</br>';           # strict equals comparision
+        echo var_dump($x != $y),'</br>';            # not equals
+        echo var_dump($x > $y),'</br>';             # more than / less than operators
+        echo var_dump($x <=> $y),'</br>';           # space operator ( 0 if equal, 1 if left is more than right, -1 if right is more than left)
 
-// Comparison Operators
 
-$x = 5;
-$y = 3;
+    #String Operator
 
-echo var_dump($x == $y),'</br>';
-echo var_dump($x === $y),'</br>';
-echo var_dump($x != $y),'</br>';
-echo var_dump($x > $y),'</br>';
-echo var_dump($x <=> $y),'</br>';
+        $x = "Hello World";
+        $y = strpos($x,'H');                        # strpos() position of a letter in a string
 
 
-#String Operator
+        if($y === false){
+            echo 'H Not Found';
+        }else{
+            echo "H Found at Index" . $y . '</br>';
+        }
 
-$x = "Hello World";
-$y = strpos($x,'H');
+        $result = $y === false ? 'H Not Found' : "H Found at Index" . $y . '</br>'; # if else shorthand 
 
+        echo $result;
 
-if($y === false){
-    echo 'H Not Found';
-}else{
-    echo "H Found at Index" . $y . '</br>';
-}
 
+        $x = 'This is $x';
+        $y = $x ?? 'This is $y';                    # $y accepts value of $x if not null else it will be something else                   
+        echo $y ,'</br>';
 
 
+    // Error Control
 
+        @file("foo.txt");                           # '@' gets rid of warnings
 
-$result = $y === false ? 'H Not Found' : "H Found at Index" . $y . '</br>';
 
-echo $result;
 
 
-$x =null;
-$y = $x ?? 'hello';
-echo $y ,'</br>';
 
+    // Incremental/ Decremental Operators
 
-// Error Control
+        $x = 5;
+        echo ++$x ,'</br>';                         # does the increment and returns the value
+        echo $x++, '</br>';                         # returns the value and does the increment
 
-$x = @file("foo.txt");
 
 
 
+    // Logical Operators
 
+        $x = true;
+        $y = false;
 
-// Incremental/ Decremental Operators
+        var_dump($x && $y);
+        var_dump($x || $y);
+        var_dump($x || !$y);
 
-$x = 5;
-echo ++$x ,'</br>'; # does the increment and returns the value
-echo $x++, '</br>'; # returns the value and does the increment
+        echo '</br>';
 
 
 
 
-// Logical Operators
 
-$x = true;
-$y = false;
 
-var_dump($x && $y);
-var_dump($x || $y);
-var_dump($x || !$y);
+    // Bitwise Operators
 
-echo '</br>';
 
+        // & | (and or)
+        // ^ (xor)
+        // ~ (flip binaries)
+        // << >> (shift binary)
 
+        $x = 6; //110                                # 110
+        $y =3;  //011                                # 011
+                                                     # -----
+                                                     # 010
 
+    var_dump($x & $y);
 
 
+    
 
-// Bitwise Operators
+    // Array Operators
 
+        echo '</br>';
+        $x = ['a','b','c'];
+        $y = ['d','e','f','g','h'];
 
-// & | (and or)
-// ^ (xor)
-// ~ (flip binaries)
-// << >> (shift binary)
+        $z = $x + $y;
+        print_r($z);
 
-$x = 6; //110
-$y =3;  //011
+        var_dump($x === $y);
 
-# 110
-# 011
-# -----
-# 010
 
-var_dump($x & $y);
 
+    // Execution Operator (``) #for bash operations
 
-// Array Operators
 
-echo '</br>';
-$x = ['a','b','c'];
-$y = ['d','e','f','g','h'];
-
-$z = $x + $y;
-print_r($z);
-
-var_dump($x === $y);
-
-
-
-// Execution Operator (``) #for bash operations
-
-
+        echo '<pre>';
+        echo `ipconfig`;
+        echo  '</pre>';

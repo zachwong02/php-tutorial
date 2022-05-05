@@ -1,21 +1,20 @@
 <?php
-// 19 hours, 27 minutes, 53 seconds
 
 
 $name = "John";
-$x =1;
-$y =&$x;
+
+
+$x =80;
+$y =&$x;  # '&' reflect new changes to this variable
 
 $x = 3;
-echo $y;
+echo $y . '</br>';
 
 
-echo "Hello World ";
-echo print "Hello World";
+echo "Hello World" . '</br>';
 
-
-echo "{$name} Invoice"; 
-echo $name . 'Invoice' 
+echo "{$name} Invoice" . '</br>'; 
+echo $name . 'Invoice' . '</br>'; 
 
 
 ?>

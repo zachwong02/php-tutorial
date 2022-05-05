@@ -1,14 +1,12 @@
 <?php
 
-// NULL
-
-// null constant 
-
 $x = null;
 
-
-echo $x;
 var_dump($x);
+
 var_dump($x === null);
-unset($x);
+
+$x = "Hello World";
+unset($x);                  # sets variable to null
+
 var_dump($x);

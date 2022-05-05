@@ -1,12 +1,11 @@
 <?php 
 
-    // Variable variables
+// Variable variables
 
 
 
 $foo = 'bar';
-
-$$foo = 'baz';
+$$foo = 'baz'; # uses value of $foo 'bar' as a variable
 
 echo $foo;
 echo $bar;
